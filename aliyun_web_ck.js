@@ -119,7 +119,10 @@ async function main(user) {
             }
 
             // 在envValues数组中查找当前用户的索引
+            console.log('DEBUG: envValues type:', typeof envValues);
+            console.log('DEBUG: envValues value:', envValues);
             const index = envValues.findIndex(e => e.userId == user.userId);
+
 
             if (index > -1) {
                 // 用户已存在于数组中
